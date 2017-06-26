@@ -1,0 +1,62 @@
+<html>
+<head>
+  <title>Alpha Blog | About</title>
+</head>
+<body>
+
+  <header id="header">
+    <nav class="navbar navbar-default navbar-inverse">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to 'Alpha Blog', pages_home_path, class: 'navbar-brand active' %>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <!--<li class="active"><a href="#">About<span class="sr-only">(current)</span></a></li>-->
+            <li class="active"><%= link_to 'About', pages_about_path %></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+  </header>
+
+  <section class="container-fluid">
+
+    <section class="jumbotron text-center">
+      <h1>ABOUT!</h1>
+    </section>
+
+    <section>
+      <div class="row col-md-12">
+        <div class="col-md-6">
+          <h3>Some header text!</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat quam at ornare lobortis. Morbi mollis neque et mi posuere porta. Morbi mollis facilisis elementum. Proin non orci urna. Nulla non augue orci. Vestibulum imperdiet venenatis tortor, nec eleifend mauris rhoncus quis. Quisque porttitor sem ut justo tincidunt, eget iaculis velit scelerisque. Fusce lacus metus, rutrum et congue eu, convallis quis sapien. Quisque ullamcorper nunc sit amet augue dignissim semper vitae ut ligula. Vivamus mi mi, molestie id condimentum sed, dapibus in nibh.</p>
+        </div>
+        <div class="col-md-6">
+          <h3>Some other header text!</h3>
+          <p>Morbi at viverra velit. Mauris et volutpat dui. Etiam sit amet ligula facilisis, convallis leo vel, elementum mi. Donec pretium arcu id quam rhoncus pulvinar. In faucibus lacus a accumsan elementum. Nulla sit amet leo sed elit faucibus cursus quis at magna. Vivamus sed condimentum massa, rutrum sollicitudin nunc.</p>
+          <p>Sed malesuada turpis et porttitor porttitor. Integer est felis, venenatis et tempus eget, mattis eu lacus. Integer cursus, nunc ut posuere tempor, massa mi efficitur massa, et elementum velit turpis sit amet tortor. Donec posuere placerat risus, a euismod lectus mollis quis. Integer varius massa sit amet lorem facilisis, lacinia posuere purus blandit. Duis nec pellentesque dui. Phasellus eu lectus sit amet sapien lobortis ullamcorper. Mauris accumsan ante ac ex molestie, sit amet tincidunt sem malesuada. Ut non risus ut ante faucibus auctor vitae ac erat. Aenean euismod lacus ac est auctor, ut semper ante elementum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        </div>
+      </div>
+    </section>
+
+  </section>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.dropdown-toggle').dropdown();
+    });
+</script>
+
+</body>
+
+</html>

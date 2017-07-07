@@ -14,3 +14,12 @@
  *= require_self
  *= require bootstrap.min
  */
+
+nav.navbar{
+    margin-bottom: 0px;
+}
+
+section.container-fluid{
+    padding: 0 8em;
+    font-size: 1.15em;
+}

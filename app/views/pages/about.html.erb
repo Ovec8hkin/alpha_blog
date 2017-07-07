@@ -15,14 +15,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <%= link_to 'Alpha Blog', pages_home_path, class: 'navbar-brand active' %>
+          <%= link_to 'Alpha Blog', root_path, class: 'navbar-brand active' %>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <!--<li class="active"><a href="#">About<span class="sr-only">(current)</span></a></li>-->
-            <li class="active"><%= link_to 'About', pages_about_path %></li>
+            <li class="active"><%= link_to 'About', about_path %></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -40,6 +40,7 @@
         <div class="col-md-6">
           <h3>Some header text!</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat quam at ornare lobortis. Morbi mollis neque et mi posuere porta. Morbi mollis facilisis elementum. Proin non orci urna. Nulla non augue orci. Vestibulum imperdiet venenatis tortor, nec eleifend mauris rhoncus quis. Quisque porttitor sem ut justo tincidunt, eget iaculis velit scelerisque. Fusce lacus metus, rutrum et congue eu, convallis quis sapien. Quisque ullamcorper nunc sit amet augue dignissim semper vitae ut ligula. Vivamus mi mi, molestie id condimentum sed, dapibus in nibh.</p>
+          <%= image_tag('night-mountain.jpg', class: 'img-responsive') %>
         </div>
         <div class="col-md-6">
           <h3>Some other header text!</h3>

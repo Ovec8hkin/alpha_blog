@@ -28,3 +28,10 @@ section.container-fluid{
 img{
     padding-top: 2em;
 }
+
+article.article{
+    border: thin solid grey;
+    margin-bottom: 1em;
+    padding: 2em;
+    border-radius: 1em;
+}

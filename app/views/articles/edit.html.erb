@@ -1,0 +1,33 @@
+<section class="jumbotron text-center">
+  <h1>Edit Article</h1>
+  <h3>You are now editing an existing article</h3>
+</section>
+
+<section class="container-fluid">
+
+  <% if @article.errors.any? %>
+      <h3>Your article has the following errors:</h3>
+      <ul style="margin-bottom: 2em">
+        <% @article.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+      </ul>
+  <% end %>
+
+  <%= form_for @article do |f| %>
+
+      <p><%= f.label :title %></p>
+      <%= f.text_field :title %>
+      <br />
+      <br />
+
+      <p><%= f.label :description %></p>
+      <%= f.text_area :description %>
+      <br />
+      <br />
+
+      <p><%= f.submit %></p>
+
+  <% end %>
+
+</section>

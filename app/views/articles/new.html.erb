@@ -1,0 +1,22 @@
+
+<section class="container-fluid">
+
+  <h1>Create an Article!</h1>
+
+  <%= form_for @article do |f| %>
+
+      <p><%= f.label :title %></p>
+      <%= f.text_field :title %>
+      <br />
+      <br />
+
+      <p><%= f.label :description %></p>
+      <%= f.text_area :description %>
+      <br />
+      <br />
+
+      <p><%= f.submit %></p>
+
+  <% end %>
+
+</section>

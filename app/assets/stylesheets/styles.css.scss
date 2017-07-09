@@ -1,2 +1,31 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+nav.navbar{
+  margin-bottom: 0;
+}
+
+section.container-fluid{
+  padding: 0 8em;
+  font-size: 1.15em;
+  text-align: justify;
+}
+
+img{
+  padding-top: 2em;
+}
+
+article.article{
+  border: thin solid grey;
+  margin-bottom: 1em;
+  padding: 2em;
+  border-radius: 1em;
+}
+
+#home-jumbo{
+  background-image: asset_url('night-mountain.jpg');
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  font-weight: bolder;
+}

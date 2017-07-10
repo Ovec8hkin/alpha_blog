@@ -14,8 +14,8 @@
       </ul>
   <% end %>
 
-  <%= render 'form' %>
+  <%= render partial: "form", locals: {show_delete: true} %>
 
-  <p><%= link_to 'Delete', article_path(@article), method: :delete, data: {confirm: "Are you sure?"} %></p>
+
 
 </section>

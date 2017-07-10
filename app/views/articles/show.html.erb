@@ -1,11 +1,12 @@
 <section class="jumbotron text-center">
   <h1><%= @article.title %></h1>
   <h3><%= @article.created_at %></h3>
+  <br /><br />
+  <p><%= link_to 'Edit Article', edit_article_path(@article), class: 'btn btn-primary' %> | <%= link_to 'Delete Article', article_path(@article), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-danger' %></p>
 </section>
 
 <section class="container-fluid">
-  <p><%= @article.description %></p>
-  <p><%= link_to 'Edit Article', edit_article_path(@article) %></p>
+  <p><%= simple_format(@article.description) %></p>
   <br /><br />
-  <p><%= link_to '< See All Articles', articles_path %></p>
+  <p><%= link_to '< See All Articles', articles_path, class: 'btn btn-default' %></p>
 </section>

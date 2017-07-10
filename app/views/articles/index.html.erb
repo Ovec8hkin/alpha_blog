@@ -10,7 +10,7 @@
 
     <article class="container article">
       <h2><%= link_to article.title, article_path(article) %></h2>
-      <p><%= simple_format(article.description) %></p>
+      <p><%= simple_format(truncate(article.description, length: 500)) %></p>
       <br />
       <p><%= link_to 'Edit', edit_article_path(article), class: 'btn btn-default' %> <%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-danger' %></p>
     </article>

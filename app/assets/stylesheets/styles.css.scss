@@ -3,12 +3,17 @@
 
 nav.navbar{
   margin-bottom: 0;
+  border-radius: 0;
 }
 
 section.container-fluid{
-  padding: 0 8em;
+  padding: 3em 8em;
   font-size: 1.15em;
   text-align: justify;
+}
+
+.row div:first-child{
+  padding-right: 4em;
 }
 
 img{
@@ -23,9 +28,40 @@ article.article{
 }
 
 #home-jumbo{
-  background-image: asset_url('night-mountain.jpg');
+  background: asset_url('night-mountain.jpg') center 13%;
   background-size: cover;
-  background-position: center center;
   color: white;
   font-weight: bolder;
+  height: 30em;
+}
+
+ul.no-bullets{
+  padding: 0;
+}
+
+li.article-list-item{
+  list-style: none;
+  display: block;
+  padding: 1em 0.5em;
+  border-bottom: thin solid grey
+}
+
+  li.article-list-item:hover{
+    background-color: #eeeeee;
+
+  }
+
+  span.right{
+    float: right;
+    font-size: 0.9em;
+  }
+
+  span.bigger{
+    font-size: 1.25em;
+  }
+
+.subheader{
+  margin-top: 0;
+  border-bottom: thin solid grey;
+  padding-bottom: 0.5em;
 }

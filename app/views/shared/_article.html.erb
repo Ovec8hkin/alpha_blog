@@ -1,11 +1,11 @@
 <% obj.each do |article| %>
 
-    <article class="container article">
+    <article class="container article col-md-8 col-md-offset-2">
       <div class="row">
-        <div class="col-md-6 article-title">
+        <div class="col-md-10 article-title">
           <h2><%= link_to article.title, article_path(article) %></h2>
         </div>
-        <div class="col-md-6 article-user-name">
+        <div class="col-md-2 article-user-name">
           <small><i><%= article.created_at.strftime("%B %d, %Y") %></i><br /><b><%= article.user.username if article.user %></b></small>
         </div>
       </div>

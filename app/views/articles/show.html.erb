@@ -1,12 +1,24 @@
 <section class="jumbotron text-center">
   <h1><%= @article.title %></h1>
-  <h3><%= @article.created_at.strftime("%B %d, %Y") %> -- <%= @article.user.username if @article.user != nil %></h3>
+  <!--<h3><%= @article.created_at.strftime("%B %d, %Y") %> -- <%= @article.user.username if @article.user != nil %></h3>-->
   <br /><br />
   <p><%= link_to 'Edit Article', edit_article_path(@article), class: 'btn btn-primary' %> | <%= link_to 'Delete Article', article_path(@article), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-danger' %></p>
 </section>
 
 <section class="container-fluid">
-  <p><%= simple_format(@article.description) %></p>
-  <br /><br />
-  <p><%= link_to '< See All Articles', articles_path, class: 'btn btn-default' %></p>
+
+  <% user = @article.user %>
+  <% if user%>
+    <div class="row user-info">
+      <%= link_to gravatar_for(user, size: 70, classes: 'img-circle'), user_path(user), style: 'float: left; margin-right: 1em;' %>
+      <h2><%= link_to user.username, user_path(user) %></h2>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <p><%= simple_format(@article.description) %></p>
+    <br /><br />
+    <p><%= link_to '< See All Articles', articles_path, class: 'btn btn-default' %></p>
+  </div>
+
 </section>

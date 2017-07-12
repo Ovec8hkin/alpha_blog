@@ -7,7 +7,7 @@ nav.navbar{
 }
 
 section.container-fluid{
-  padding: 3em 8em;
+  padding: 0.5em 8em 3em 8em;
   font-size: 1.15em;
   text-align: justify;
 }
@@ -93,4 +93,14 @@ li.article-list-item{
   padding-left: 1em;
   padding-right: 1em;
   min-width: 8em;
+}
+
+.profile-pic{
+  margin-bottom: 1.5em;
+}
+
+.user-info{
+  padding-bottom: 1em;
+  border-bottom: thin solid #eaeaea;
+  margin-bottom: 1em;
 }

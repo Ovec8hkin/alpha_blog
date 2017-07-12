@@ -8,10 +8,12 @@
 
   <% @users.each do |user| %>
 
-      <article class="container article">
+      <article class="container article col-md-8 col-md-offset-2 text-center">
+        <%= link_to gravatar_for(user, classes: 'img-circle profile-pic center'), user_path(user) %>
         <div class="row">
-          <div class="col-md-6 article-title">
+          <div class="col-md-12 article-title text-center">
             <h2><%= link_to user.username, user_path(user) %></h2>
+            <p><%= pluralize(user.articles.count, "articles") %></p>
           </div>
         </div>
       </article>

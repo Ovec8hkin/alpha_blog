@@ -1,5 +1,5 @@
 <section class="jumbotron text-center">
-  <%= gravatar_for @user, size: 100   %>
+  <%= gravatar_for @user, size: 100, classes: 'img-circle' %>
   <h1><%= @user.username %></h1>
   <br /><br />
   <p><%= link_to 'Edit Account', edit_user_path(@user), class: 'btn btn-primary' %> | <%= link_to 'Delete Account', user_path(@user), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-danger' %></p>

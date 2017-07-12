@@ -23,6 +23,29 @@ article.article{
   border-radius: 1em;
 }
 
+  .article .row{
+    display: block;
+    height: 5em;
+  }
+
+  .article-title h2{
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  .article-user-name{
+    display: block;
+    height: 5em;
+  }
+
+  .article small{
+    display: inline-block;
+    vertical-align: baseline;
+    float: right;
+    text-align: right;
+    font-size: 1em;
+  }
+
 #home-jumbo{
   background: asset_url('night-mountain.jpg') center 13%;
   background-size: cover;
@@ -54,6 +77,10 @@ li.article-list-item{
 
   span.bigger{
     font-size: 1.25em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 2em;
   }
 
 .subheader{

@@ -6,22 +6,6 @@
 
 <section class="container-fluid">
 
-  <% @all_articles.each do |article| %>
-
-    <article class="container article">
-      <div class="row">
-        <div class="col-md-6 article-title">
-          <h2><%= link_to article.title, article_path(article) %></h2>
-        </div>
-        <div class="col-md-6 article-user-name">
-          <small><i><%= article.created_at.strftime("%B %d, %Y") %></i><br /><b><%= article.user.username if article.user %></b></small>
-        </div>
-      </div>
-      <p><%= simple_format(truncate(article.description, length: 500)) %></p>
-      <br />
-      <p><%= link_to 'Edit', edit_article_path(article), class: 'btn btn-default' %> <%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-danger' %></p>
-    </article>
-
-  <% end %>
+  <%= render 'shared/article', obj: @all_articles %>
 
 </section>

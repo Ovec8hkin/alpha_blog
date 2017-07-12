@@ -12,7 +12,7 @@ section.container-fluid{
   text-align: justify;
 }
 
-img{
+img:not(.img-circle){
   padding-top: 2em;
 }
 

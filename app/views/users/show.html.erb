@@ -13,5 +13,11 @@
   </div>
 
   <h2 class="col-sm-10 col-sm-offset-1 text-center" id="user-article-heading">Articles</h2>
-  <%= render 'shared/article', obj: @user.articles %>
+
+  <%= render 'shared/article', obj: @user_articles %>
+
+  <div class="col-sm-6 col-sm-offset-3 text-center">
+    <%= will_paginate @user_articles %>
+  </div>
+
 </section>

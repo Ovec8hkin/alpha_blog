@@ -6,6 +6,14 @@
 
 <section class="container-fluid">
 
+  <div class="col-sm-6 col-sm-offset-3 text-center">
+    <%= will_paginate @all_articles%>
+  </div>
+
   <%= render 'shared/article', obj: @all_articles %>
+
+  <div class="col-sm-6 col-sm-offset-3 text-center">
+    <%= will_paginate @all_articles%>
+  </div>
 
 </section>

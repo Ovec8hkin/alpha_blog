@@ -13,6 +13,9 @@ gem 'rails', '~> 5.0.4'
 gem 'puma', '~> 3.0'
 # Use bcrypt to create secure passwords
 gem 'bcrypt', '~> 3.1.7'
+# Add Pagination
+gem 'will_paginate', '3.1.5'
+gem 'bootstrap-will_paginate', '0.0.10'
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sass-rails', '~> 5.0'

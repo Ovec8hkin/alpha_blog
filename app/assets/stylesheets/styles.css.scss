@@ -23,27 +23,8 @@ article.article{
   border-radius: 1em;
 }
 
-  .article .row{
-    display: block;
-    height: 5em;
-  }
-
-  .article-title h2{
-    padding-top: 0;
-    margin-top: 0;
-  }
-
-  .article-user-name{
-    display: block;
-    height: 5em;
-  }
-
-  .article small{
-    display: inline-block;
-    vertical-align: baseline;
-    float: right;
-    text-align: right;
-    font-size: 1em;
+  .article h2{
+    font-size: 2.5em;
   }
 
 #home-jumbo{
@@ -103,4 +84,19 @@ li.article-list-item{
   padding-bottom: 1em;
   border-bottom: thin solid #eaeaea;
   margin-bottom: 1em;
+}
+
+#bio{
+  margin-bottom: 3em;
+}
+
+#user-article-heading{
+  padding-bottom: 0.5em;
+  border-bottom: thin solid lightgrey;
+  margin-bottom: 1.5em;
+}
+
+h2.no-margin{
+  margin: 0;
+  padding: 0;
 }

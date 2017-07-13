@@ -29,6 +29,16 @@
             <%= f.password_field :password, class: 'form-control clearfix', placeholder: 'Password' %>
           </div>
         </div>
+        <% if !@user.new_record? %>
+          <div class="form-group">
+            <div class="control-label col-sm-offset-2 col-sm-1">
+              <%= f.label :bio %>
+            </div>
+            <div class="col-sm-6">
+              <%= f.text_area :bio, rows: 5, class: 'form-control clearfix', placeholder: 'Bio' %>
+            </div>
+          </div>
+        <% end %>
         <div class="form-group">
           <div class="col-sm-offset-3 col-sm-10 ">
             <%= f.submit(@user.new_record? ? "Sign Up" : "Update Account", class: 'btn btn-primary') %>

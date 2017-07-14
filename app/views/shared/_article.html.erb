@@ -1,12 +1,20 @@
-<% obj.each do |article| %>
+<% if obj.count == 0 %>
+  <div class="row col-md-8 col-md-offset-2 text-center">
+    <h3>Sorry, No Articles!</h3>
+  </div>
+<% else %>
+  <% obj.each do |article| %>
 
-    <article class="container article col-md-8 col-md-offset-2 text-center">
-      <h2><%= link_to article.title, article_path(article) %></h2>
-      <small><i><%= article.created_at.strftime("%B %d, %Y") %></i><br /><b><%= link_to(article.user.username, user_path(article.user)) if article.user %></b></small>
-      <br /><br />
-      <p><%= simple_format(truncate(article.description, length: 500)) %></p>
-      <br />
-      <p><%= link_to 'Edit', edit_article_path(article), class: 'btn btn-default' %> <%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-danger' %></p>
-    </article>
+      <article class="container article col-md-8 col-md-offset-2 text-center">
+        <h2><%= link_to article.title, article_path(article) %></h2>
+        <small><i><%= article.created_at.strftime("%B %d, %Y") %></i><br /><b><%= link_to(article.user.username, user_path(article.user)) if article.user %></b></small>
+        <br /><br />
+        <p><%= simple_format(truncate(article.description, length: 500)) %></p>
+        <br />
+        <% if logged_in? && article.user == current_user  %>
+          <p><%= link_to 'Edit', edit_article_path(article), class: 'btn btn-default' %> <%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-danger' %></p>
+        <% end %>
+      </article>
 
+  <% end %>
 <% end %>

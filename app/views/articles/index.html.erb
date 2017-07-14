@@ -1,7 +1,9 @@
 <section class="jumbotron text-center">
   <h1>Listing all Articles</h1>
   <br />
-  <h3><%= link_to 'Create a new article', new_article_path, class: 'btn btn-lg btn-success' %></h3>
+  <% if logged_in? %>
+    <h3><%= link_to 'Create a new article', new_article_path, class: 'btn btn-lg btn-success' %></h3>
+  <% end %>
 </section>
 
 <section class="container-fluid">

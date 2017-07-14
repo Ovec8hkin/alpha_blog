@@ -630,7 +630,7 @@
       <workItem from="1498509781088" duration="4607000" />
       <workItem from="1499397118625" duration="43632000" />
       <workItem from="1499990697410" duration="3912000" />
-      <workItem from="1499995075360" duration="469000" />
+      <workItem from="1499995075360" duration="477000" />
     </task>
     <task id="LOCAL-00001" summary="Added some text to the homepage">
       <created>1499405203493</created>
@@ -870,11 +870,18 @@
       <option name="project" value="LOCAL" />
       <updated>1499995568187</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Dynamically set user for article to logged in user">
+      <created>1499995607678</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1499995607678</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52620000" />
+    <option name="totallyTimeSpent" value="52628000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />

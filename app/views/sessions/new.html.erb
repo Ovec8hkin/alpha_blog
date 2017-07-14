@@ -1,0 +1,39 @@
+<section class="jumbotron text-center">
+  <h1>Login to Alpha Blog</h1>
+</section>
+
+<section class="container-fluid">
+
+  <div class="row">
+    <div class="col-xs-12">
+
+      <%= form_for(:session, :html => {class: 'form-horizontal', role: 'form'}, url: login_path) do |f| %>
+
+          <div class="form-group">
+            <div class="control-label col-sm-2 col-sm-offset-1">
+              <%= f.label :email %>
+            </div>
+            <div class="col-sm-6">
+              <%= f.email_field :email, class: 'form-control clearfix', placeholder: "Email" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="control-label col-sm-2  col-sm-offset-1">
+              <%= f.label :password %>
+            </div>
+            <div class="col-sm-6">
+              <%= f.password_field :password, class: 'form-control clearfix', placeholder: 'Password' %>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-10 ">
+              <%= f.submit "Login", class: 'btn btn-primary' %>
+            </div>
+          </div>
+
+      <% end %>
+
+    </div>
+  </div>
+
+</section>

@@ -45,6 +45,7 @@ class UsersController < ApplicationController
     redirect_to users_path
   end
 
+
   private
 
   def user_params
@@ -56,7 +57,7 @@ class UsersController < ApplicationController
   end
 
   def require_same_user
-    if current_user != @user
+    if current_user != @user and !current_user.admin?
       flash[:danger] = "You need to be logged in to do this"
       redirect_to login_path
     end

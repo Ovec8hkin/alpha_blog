@@ -7,7 +7,7 @@ class CreateCategoriesTest < ActionDispatch::IntegrationTest
   end
 
   test 'get_new_form' do
-    post login_path, params: { session: {email: @user.email, password: @user.password}}
+    sign_in_as(@user, "password")
     get new_category_path
     assert_template 'categories/new'
     assert_difference 'Category.count', 1 do
@@ -19,7 +19,7 @@ class CreateCategoriesTest < ActionDispatch::IntegrationTest
   end
 
   test 'invalid_category_submissions' do
-    post login_path, params: { session: {email: @user.email, password: @user.password}}
+    sign_in_as(@user, "password")
     get new_category_path
     assert_template 'categories/new'
     assert_no_difference 'Category.count' do

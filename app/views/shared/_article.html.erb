@@ -11,6 +11,10 @@
         <br /><br />
         <p><%= simple_format(truncate(article.description, length: 500)) %></p>
         <br />
+        <% if article.categories.any? %>
+          <p><%= render article.categories %></p>
+          <br />
+        <% end %>
         <% if logged_in? && (article.user == current_user || current_user.admin?)  %>
           <p><%= link_to 'Edit', edit_article_path(article), class: 'btn btn-default' %> <%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-danger' %></p>
         <% end %>

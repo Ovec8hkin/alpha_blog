@@ -1,0 +1,21 @@
+<section class="jumbotron text-center">
+  <h1>Listing all Articles in <%= @category.name %></h1>
+  <br />
+  <% if logged_in? %>
+      <h3><%= link_to 'Add a new article to this category', new_article_path, class: 'btn btn-lg btn-success' %></h3>
+  <% end %>
+</section>
+
+<section class="container-fluid">
+
+  <div class="col-sm-6 col-sm-offset-3 text-center">
+    <%= will_paginate @category_articles %>
+  </div>
+
+  <%= render 'shared/article', obj: @category_articles %>
+
+  <div class="col-sm-6 col-sm-offset-3 text-center">
+    <%= will_paginate @category_articles %>
+  </div>
+
+</section>

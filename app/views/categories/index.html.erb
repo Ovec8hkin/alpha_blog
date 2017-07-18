@@ -13,6 +13,8 @@
 
       <article class="container article col-md-8 col-md-offset-2 text-center">
         <h2><%= link_to category.name, category_path(category) %></h2>
+        <br />
+        <smal><%= pluralize(category.articles.count, "article") %></smal>
       </article>
 
   <% end %>

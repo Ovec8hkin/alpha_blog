@@ -1,0 +1,16 @@
+<section class="jumbotron text-center">
+  <h1>Categories</h1>
+  <h3>Make a new category for articles now!</h3>
+</section>
+
+<section class="container-fluid">
+
+  <% @categories.each do |category| %>
+
+      <article class="container article col-md-8 col-md-offset-2 text-center">
+        <h2><%= link_to category.name, category_path(category) %></h2>
+      </article>
+
+  <% end %>
+
+</section>

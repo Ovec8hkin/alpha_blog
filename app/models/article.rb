@@ -6,5 +6,11 @@ class Article < ActiveRecord::Base
 
   validates :title, presence: true, length: {minimum: 1, maximum: 50}
   validates :description, presence: true, length: {minimum: 1, maximum: 100000}
+  validate :has_category
+
+
+  def has_category
+    errors.add(:base, 'Must have at least one category') if self.categories.blank?
+  end
 
 end

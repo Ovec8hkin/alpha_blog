@@ -5,6 +5,10 @@
 
 <section class="container-fluid">
 
+  <div class="col-sm-6 col-sm-offset-3 text-center">
+    <%= will_paginate @categories%>
+  </div>
+
   <% @categories.each do |category| %>
 
       <article class="container article col-md-8 col-md-offset-2 text-center">
@@ -12,5 +16,9 @@
       </article>
 
   <% end %>
+
+  <div class="col-sm-6 col-sm-offset-3 text-center">
+    <%= will_paginate @categories %>
+  </div>
 
 </section>

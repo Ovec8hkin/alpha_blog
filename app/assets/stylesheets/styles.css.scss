@@ -96,9 +96,9 @@ li.article-list-item{
   margin-bottom: 1.5em;
 }
 
-h2.no-margin{
-  margin: 0;
+.no-margin{
   padding: 0;
+  margin: 0;
 }
 
 .category_name{
@@ -114,4 +114,26 @@ h2.no-margin{
 
 .input_checkbox input{
   width: auto !important;
+}
+
+.comment{
+  margin-bottom: 0 !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-radius: 0 !important;
+}
+
+.comment_gravatar{
+  margin-right: 2em;
+}
+
+.comment_text{
+  font-weight: 300;
+}
+
+.comment-date{
+  display: inline-block;
+  margin-top: 0.15em;
+  margin-bottom: 1.25em;
 }

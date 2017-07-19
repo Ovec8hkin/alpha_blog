@@ -1,0 +1,21 @@
+<% if obj.count == 0 %>
+    <div class="row col-md-8 col-md-offset-2 text-center">
+      <h3>Sorry, No Comments!</h3>
+    </div>
+<% else %>
+    <% obj.each do |comment| %>
+
+        <article class="container article comment row col-md-12">
+          <div class="col-md-1 comment_gravatar">
+            <%= gravatar_for(comment.user) %>
+          </div>
+          <div class="col-md-10 comment_text">
+            <h3 class="no-margin"><%= comment.user.username %></h3>
+            <small class="comment-date"><%= comment.created_at %></small>
+            <p><%= comment.comment %></p>
+          </div>
+        </article>
+
+
+    <% end %>
+<% end %>

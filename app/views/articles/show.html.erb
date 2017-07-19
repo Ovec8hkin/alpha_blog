@@ -19,6 +19,15 @@
 
   <div class="row">
     <p><%= simple_format(@article.description) %></p>
+
+    <div class="container comment-container">
+      <h2>Comments</h2>
+      <hr />
+      <% @comment.article = @article %>
+      <%= render 'comments/form', object: @comment %>
+      <%= render 'comments/comment', obj: @article.comments %>
+    </div>
+
     <br /><br />
     <p class="text-center">
       <%= link_to '< See All Articles', articles_path, class: 'btn btn-default' %>

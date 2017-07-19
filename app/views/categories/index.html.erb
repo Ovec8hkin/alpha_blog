@@ -1,6 +1,8 @@
 <section class="jumbotron text-center">
   <h1>Categories</h1>
-  <h3>Make a new category for articles now!</h3>
+  <% if logged_in? %>
+      <h3><%= link_to 'Create a new category', new_category_path, class: 'btn btn-lg btn-success' %></h3>
+  <% end %>
 </section>
 
 <section class="container-fluid">

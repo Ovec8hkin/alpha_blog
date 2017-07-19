@@ -1,21 +1,33 @@
 <section class="jumbotron text-center">
   <h1>Listing all Articles in <%= @category.name %></h1>
   <br />
-  <% if logged_in? %>
-      <h3><%= link_to 'Add a new article to this category', new_article_path, class: 'btn btn-lg btn-success' %></h3>
+  <% if logged_in? && current_user.admin? %>
+      <%= link_to 'Edit Category', edit_category_path(@category), class: 'btn btn-primary' %>
+      <%= link_to 'Delete Category', category_path(@category), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-danger' %>
   <% end %>
+
 </section>
 
 <section class="container-fluid">
 
-  <div class="col-sm-6 col-sm-offset-3 text-center">
-    <%= will_paginate @category_articles %>
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+      <p id="bio"></p>
+    </div>
   </div>
+
+  <h2 class="col-sm-10 col-sm-offset-1 text-center" id="user-article-heading">Articles</h2>
 
   <%= render 'shared/article', obj: @category_articles %>
 
   <div class="col-sm-6 col-sm-offset-3 text-center">
     <%= will_paginate @category_articles %>
+  </div>
+
+  <div class="row col-md-12" style="margin-bottom: 3em;">
+    <p class="text-center">
+      <%= link_to '< See All Categories', categories_path, class: 'btn btn-default' %>
+    </p>
   </div>
 
 </section>

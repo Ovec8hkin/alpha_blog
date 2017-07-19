@@ -23,8 +23,10 @@
     <div class="container comment-container">
       <h2>Comments</h2>
       <hr />
-      <% @comment.article = @article %>
-      <%= render 'comments/form', object: @comment %>
+      <% if logged_in? %>
+        <% @comment.article = @article %>
+        <%= render 'comments/form', object: @comment %>
+      <% end %>
       <%= render 'comments/comment', obj: @article.comments %>
     </div>
 

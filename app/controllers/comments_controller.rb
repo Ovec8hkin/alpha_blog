@@ -1,5 +1,7 @@
 class CommentsController < ApplicationController
 
+  before_action :require_user
+
   def new
     @comment = Comment.new(article_id: params[:article_id])
   end
@@ -22,5 +24,7 @@ class CommentsController < ApplicationController
   def comment_params
     params.require(:comment).permit(:comment, :article_id)
   end
+
+
 
 end
